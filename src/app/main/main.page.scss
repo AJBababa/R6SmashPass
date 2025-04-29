@@ -1,0 +1,136 @@
+ion-content {
+  --background: url('/assets/protomax-1080p-singlemonitor-r6-wallpaper-ranked (1).jpg') no-repeat center center / cover;
+}
+
+
+
+
+ion-content {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+  .contenedor-principal {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.2rem;
+  }
+  
+  .card-operador {
+    width: 100%;
+    background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+    color: #0ff;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    margin-top: 17%;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+    border: 1px solid #0ff;
+  }
+  
+  
+  .card-operador img.imagen-principal {
+    max-height: 250px;
+    object-fit: contain;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+  }
+  
+  .botones-voto {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  ion-button:hover {
+    transform: scale(1.15);
+    filter: brightness(1.6);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  
+  ion-button {
+    flex: 1;
+  }
+  
+  .card-anterior {
+    width: 200px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #ccc;
+    position: fixed; 
+    bottom: 10%;  
+    right: 5%;  
+    z-index: 1000;
+
+    background: rgba(0, 0, 0, 0.6); // Fondo semitransparente
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.7); // Sombra suave para destacar
+  }
+  
+  .card-anterior h2 {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    color: #fff;
+  }
+  
+  .card-anterior h5 {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    color: #aaa;
+  }
+  
+  .card-anterior img.imagen-anterior {
+    max-height: 120px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+  }
+
+  #selectGenero {
+    position: fixed;
+    top: 10%;
+    left: 5%;
+    z-index: 1000;
+  
+    --background: rgba(0, 255, 255, 0.4);
+    --color: #fff;
+    --border-radius: 10px;
+    --padding-start: 10px;
+    --height: 50px;
+  
+    text-align: center;
+    width: 150px; /* puedes ajustar el ancho si quieres */
+    font-size: 1rem;
+  }
+  
+  #selectGenero .select-text {
+    text-align: center;
+  }
+  
+  #selectGenero:focus {
+    --border-color: #444;
+    --box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+  }
+
+  .contenedor-final {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .card-final {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  
+  

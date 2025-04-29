@@ -1,0 +1,21 @@
+<ion-content [fullscreen]="true">
+
+    <ion-grid>
+        <ng-container *ngFor="let op of operadores; let i = index">
+          <ion-row *ngIf="i % 5 === 0">
+            <ion-col size="2.4" *ngFor="let operador of operadores.slice(i, i + 5)">
+              <ion-card>
+                <img [src]="operador.imagen_url"/>
+                <ion-card-header>
+                  <ion-card-title>{{operador.nombre}}</ion-card-title>
+                  <ion-card-title> Smashes: {{operador.smashes}} Passes: {{operador.passes}}</ion-card-title>
+                  <ion-card-subtitle>{{operador.genero}}</ion-card-subtitle>
+                </ion-card-header>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+        </ng-container>
+      </ion-grid>
+      
+
+</ion-content>

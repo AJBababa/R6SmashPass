@@ -1,0 +1,50 @@
+<ion-content [fullscreen]="true">
+
+  <div class="contenedor-principal" *ngIf="!juegoTerminado">
+
+    <ion-select [(ngModel)]="generoSeleccionado" (ionChange)="filtrarOperadores()" id="selectGenero">
+      <ion-select-option value="mixto">Mixto</ion-select-option>
+      <ion-select-option value="hombres">Hombres</ion-select-option>
+      <ion-select-option value="mujeres">Feminas</ion-select-option>
+    </ion-select>
+
+    <ion-card *ngIf="operador" class="card-operador">
+      <ion-card-header>
+        <ion-card-title>{{ operador.nombre }}</ion-card-title>
+        <ion-card-subtitle>{{ operador.genero }}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <img [src]="operador.imagen_url" alt="Operador" class="imagen-principal" />
+      </ion-card-content>
+    </ion-card>
+
+    <div class="botones-voto" *ngIf="operador">
+      <ion-button expand="block" color="success" (click)="votar('smash')">🫦Smash🫦</ion-button>
+      <ion-button expand="block" color="danger" (click)="votar('pass')">🤢Pass🤢</ion-button>
+    </div>
+
+    <div *ngIf="operadorAnterior" class="card-anterior">
+      <h2>{{ operadorAnterior.nombre }} - {{ operadorAnterior.tipo_voto }}</h2>
+      <h5>{{ operadorAnterior.genero }}</h5>
+
+      <img [src]="operadorAnterior.imagen_url" alt="Operador anterior" class="imagen-anterior" />
+
+      <p>Smashes: {{ operadorAnterior.smashes }}</p>
+      <p>Passes: {{ operadorAnterior.passes }}</p>
+    </div>
+
+  </div>
+
+  <div class="contenedor-final" *ngIf="juegoTerminado">
+    <ion-card class="card-final">
+      <ion-card-header>
+        <ion-card-title>🎉 ¡Has votado a todos los operadores! 🎉</ion-card-title>
+      </ion-card-header>
+      <ion-card-content class="ion-text-center">
+        <p>¡Gracias por participar en el R6 Smash or Pass!</p>
+        <ion-button color="primary" (click)="volverInicio()">Ver resultados</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+</ion-content>

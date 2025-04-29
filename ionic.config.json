@@ -1,0 +1,7 @@
+{
+  "name": "BarSantaMonica",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
