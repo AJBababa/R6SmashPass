@@ -16,7 +16,10 @@ export class MainPage implements OnInit {
 
   constructor(private http: HttpClient, private router: Router) { }
 
-  public url_host: string = "http://localhost:3000/"
+  public url_host: string = "https://r6backend.onrender.com" 
+  
+  //https://r6backend.onrender.com
+  //http://localhost:3000
   
   public operador = {
     id: '',
